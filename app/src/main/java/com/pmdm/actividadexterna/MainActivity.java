@@ -3,6 +3,7 @@ package com.pmdm.actividadexterna;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,6 +17,36 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
+
+    protected void onStart(){
+        super.onStart();
+        Log.w("ON START", "HACEMOS START MAIN---------------------------");
+    }
+
+    protected void onRestart(){
+        super.onRestart();
+        Log.w("ON RESTART", "HACEMOS RESTART MAIN---------------------------");
+    }
+
+    protected void onResume(){
+        super.onResume();
+        Log.w("ON RESUME", "HACEMOS RESUME MAIN---------------------------");
+    }
+
+    protected void onPause(){
+        super.onPause();
+        Log.w("ON PAUSE", "HACEMOS PAUSE MAIN---------------------------");
+    }
+
+    protected void onStop(){
+        super.onStop();
+        Log.w("ON STOP", "HACEMOS STOP MAIN---------------------------");
+    }
+
+    protected void onDestroy(){
+        super.onDestroy();
+        Log.w("ON DESTROY", "HACEMOS DESTROY MAIN---------------------------");
     }
 
     public void pulsado(View v){

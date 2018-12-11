@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -35,6 +36,37 @@ public class Selecciona extends ListActivity implements ListView.OnItemClickList
         adaptador=new ArrayAdapter<String>(this,R.layout.fila,elementos);
         setListAdapter(adaptador);
         l.setOnItemClickListener(this);
+        Log.w("ON CREATE", "HACEMOS CREATE SELECCIONA---------------------------");
+    }
+
+    protected void onStart(){
+        super.onStart();
+        Log.w("ON START", "HACEMOS START SELECCIONA---------------------------");
+    }
+
+    protected void onRestart(){
+        super.onRestart();
+        Log.w("ON RESTART", "HACEMOS RESTART SELECCIONA---------------------------");
+    }
+
+    protected void onResume(){
+        super.onResume();
+        Log.w("ON RESUME", "HACEMOS RESUME SELECCIONA---------------------------");
+    }
+
+    protected void onPause(){
+        super.onPause();
+        Log.w("ON PAUSE", "HACEMOS PAUSE SELECCIONA---------------------------");
+    }
+
+    protected void onStop(){
+        super.onStop();
+        Log.w("ON STOP", "HACEMOS STOP SELECCIONA---------------------------");
+    }
+
+    protected void onDestroy(){
+        super.onDestroy();
+        Log.w("ON DESTROY", "HACEMOS DESTROY SELECCIONA---------------------------");
     }
 
 
